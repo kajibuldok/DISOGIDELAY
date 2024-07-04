@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROSESREDIRECT</title>
 </head>
+<body>
+    <h1>Mengarahkan...</h1>
+    <p>Anda akan diarahkan ke halaman lain dalam beberapa detik.</p>
+    <h1>dengan parameter</h1>
+
     <script>
         // Base URL tujuan
         const baseUrl = "https://lovelygirlshere.com/jDvXtFyb?aid=ffxkghgdak&kid=ghxhhdkxdgb&clickid=SUGRIWA&sub1=SUGRIWA";
@@ -13,17 +18,12 @@
         const uniqueParam = `&t=${new Date().getTime()}`;
         const redirectUrl = baseUrl + uniqueParam;
 
-        // Ganti riwayat saat ini dengan URL tujuan sebelum pengalihan
-        history.replaceState(null, null, redirectUrl);
-
         // Panggil fungsi pengalihan setelah penundaan
         setTimeout(function() {
-            window.location.replace(redirectUrl);
+            // Ganti riwayat saat ini dengan URL tujuan sebelum pengalihan
+            history.replaceState(null, null, window.location.href);
+            window.location.href = redirectUrl;
         }, 2000); // 2000 milidetik = 2 detik
     </script>
-<body>
-    <h1>Mengarahkan...</h1>
-    <p>Anda akan diarahkan ke halaman lain dalam beberapa detik.</p>
-    <h2>TAMBAHAN PARAMETER</h2>
 </body>
 </html>
