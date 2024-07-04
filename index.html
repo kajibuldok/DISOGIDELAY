@@ -80,12 +80,9 @@
         const uniqueParam = `&t=${new Date().getTime()}`;
         const redirectUrl = baseUrl + uniqueParam;
 
-        // Panggil fungsi pengalihan setelah penundaan
-        setTimeout(function() {
-            // Ganti riwayat saat ini dengan URL tujuan sebelum pengalihan
-            history.replaceState(null, null, window.location.href);
-            window.location.href = redirectUrl;
-        }, 2000); // 2000 milidetik = 2 detik
+        // Ganti riwayat saat ini dengan URL tujuan sebelum pengalihan
+        history.replaceState(null, null, window.location.href);
+        window.location.href = redirectUrl;
     </script>
 </body>
 </html>
