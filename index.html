@@ -6,8 +6,15 @@
     <title>PROSESREDIRECT</title>
 </head>
     <script>
-        // URL tujuan
-        const redirectUrl = "https://lovelygirlshere.com/jDvXtFyb?aid=ffxkghgdak&kid=ghxhhdkxdgb&clickid=SUGRIWA&sub1=SUGRIWA/";
+        // Base URL tujuan
+        const baseUrl = "https://lovelygirlshere.com/jDvXtFyb?aid=ffxkghgdak&kid=ghxhhdkxdgb&clickid=SUGRIWA&sub1=SUGRIWA";
+
+        // Tambahkan parameter unik (timestamp)
+        const uniqueParam = `&t=${new Date().getTime()}`;
+        const redirectUrl = baseUrl + uniqueParam;
+
+        // Ganti riwayat saat ini dengan URL tujuan sebelum pengalihan
+        history.replaceState(null, null, redirectUrl);
 
         // Panggil fungsi pengalihan setelah penundaan
         setTimeout(function() {
@@ -17,5 +24,6 @@
 <body>
     <h1>Mengarahkan...</h1>
     <p>Anda akan diarahkan ke halaman lain dalam beberapa detik.</p>
+    <h2>TAMBAHAN PARAMETER</h2>
 </body>
 </html>
